@@ -1,3 +1,3 @@
 [submodule "reporter-assets"]
-        path = reporter-assets
-	url = https://github.com/Innei/reporter-assets.git
+	path = reporter-assets
+	url = git@github.com:van-space/reporter-assets.git
