@@ -11,7 +11,7 @@
       "git pull --rebase",
       "ni"
     ],
-    "changelog": true
+    "changelog": false
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
