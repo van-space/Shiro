@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            innei/shiro
+            huangyan321/shiro
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
