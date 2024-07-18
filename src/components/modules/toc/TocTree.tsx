@@ -203,7 +203,6 @@ const MemoedItem = memo<{
         itemOffsetTop - containerHeight / 2 + itemHeight / 2
     }
   }, [isActive])
-
   return (
     <RightToLeftTransitionView
       timeout={
@@ -220,7 +219,7 @@ const MemoedItem = memo<{
       {isActive && (
         <m.span
           layoutId="active-toc-item"
-          layout
+          layout="position"
           className="absolute inset-y-[3px] left-0 w-[2px] rounded-sm bg-accent"
         />
       )}

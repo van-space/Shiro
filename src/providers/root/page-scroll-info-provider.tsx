@@ -54,6 +54,7 @@ const ScrollDetector = () => {
       },
       16,
       {
+        trailing: false,
         leading: false,
       },
     )
