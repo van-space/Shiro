@@ -118,14 +118,13 @@ const PostBox = () => {
 const List = () => {
   const [hasNext, setHasNext] = useState(true)
 
-  const { data, isLoading, fetchNextPage } = useInfiniteQuery({
+  const { data, isLoading, fetchNextPage, refetch } = useInfiniteQuery({
     queryKey: QUERY_KEY,
     queryFn: async ({ pageParam }) => {
       const { data } = await apiClient.shorthand.getList({
         before: pageParam,
         size: FETCH_SIZE,
       })
-
       if (data.length < FETCH_SIZE) {
         setHasNext(false)
       }
@@ -148,6 +147,7 @@ const List = () => {
       .then(({ code }) => {
         if (code === RecentlyAttitudeResultEnum.Inc) {
           toast.success(sample(['(￣▽￣*) ゞ', '(＾▽＾)']))
+          refetch()
         } else {
           toast.success('[○･｀Д´･○]')
         }
@@ -160,6 +160,7 @@ const List = () => {
       .then(({ code }) => {
         if (code === RecentlyAttitudeResultEnum.Inc) {
           toast.success('(╥_╥)')
+          refetch()
         } else {
           toast.success('ヽ (・∀・) ﾉ')
         }
@@ -171,7 +172,7 @@ const List = () => {
 
   const getPrevData = usePrevious(data)
   useEffect(() => {
-    if (!data) return
+    if (!data?.pages.flat().length) return
     const pages = getPrevData()?.pages
     const count = pages?.reduce((acc, cur) => {
       return acc + cur.length
