@@ -13,7 +13,14 @@ export const PinIconToggle: Component<{
   onPinChange: (pin: boolean) => void
 }> = ({ className, pin, onPinChange }) => {
   const isLogged = useIsLogged()
-
+  const animateWhileHover = {
+    y: [0, -2, 0],
+    x: [0, 2, 0],
+    transition: {
+      duration: 0.8,
+      repeat: Infinity,
+    },
+  }
   const handlePin: MouseEventHandler<HTMLButtonElement> = async (e) => {
     e.preventDefault()
     e.stopPropagation()
@@ -23,6 +30,7 @@ export const PinIconToggle: Component<{
   return (
     <MotionButtonBase
       aria-label="Pin this post"
+      whileHover={animateWhileHover}
       className={clsxm(
         'absolute bottom-0 right-0 top-[4px] z-10 -m-5 box-content hidden size-5 items-center p-5',
         isLogged &&
