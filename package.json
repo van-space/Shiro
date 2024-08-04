@@ -165,7 +165,7 @@
     "postcss-preset-env": "9.5.16",
     "postcss-prune-var": "1.1.2",
     "prettier": "3.3.3",
-    "rimraf": "5.0.10",
+    "rimraf": "6.0.1",
     "shiki": "1.10.3",
     "simple-git-hooks": "2.11.1",
     "tailwind-scrollbar": "3.1.0",
