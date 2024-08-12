@@ -85,7 +85,7 @@ export const TagDetailModal = (props: { name: string }) => {
   const { dismissAll } = useModalStack()
   if (isLoading)
     return (
-      <div className="center flex h-24 w-full">
+      <div className="flex h-24 w-full center">
         <div className="loading loading-dots loading-md" />
       </div>
     )

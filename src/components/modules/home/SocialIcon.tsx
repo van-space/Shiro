@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { memo, useMemo } from 'react'
 import type { ReactNode } from 'react'
 
