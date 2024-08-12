@@ -1,10 +1,9 @@
+import { addDynamicIconSelectors } from '@iconify/tailwind'
+import typography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 import { withTV } from 'tailwind-variants/transformer'
 import type { Config } from 'tailwindcss'
 import type { CSSRuleObject, PluginAPI } from 'tailwindcss/types/config'
-
-import { addDynamicIconSelectors } from '@iconify/tailwind'
-import typography from '@tailwindcss/typography'
 
 require('./cssAsPlugin')
 
