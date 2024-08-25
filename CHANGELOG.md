@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.1.10](https://github.com/van-space/Shiro/compare/v1.1.9...v1.1.10) (2024-08-25)
+
+
+### Bug Fixes
+
+* posts settings ([2f54e50](https://github.com/van-space/Shiro/commit/2f54e50fdf89cd1cdc64770c6dacacd9a752458b))
+
+
+
 ## [1.1.9](https://github.com/van-space/Shiro/compare/v1.1.8...v1.1.9) (2024-08-25)
 
 
