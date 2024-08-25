@@ -42,11 +42,14 @@ export const PostsSortingFab = () => {
   const routeParams = useSearchParams()
   useEffect(() => {
     if (!isClientSide) return
-    const postViewMode = localStorage.getItem(storageKey) as PostMode
-    if (postViewMode) setPostMode(postViewMode)
+    const postViewModeFromStorage = localStorage.getItem(storageKey) as PostMode
     const search = new URLSearchParams(routeParams)
+    const postViewModeFromQueryParams = search.get('postMode') as PostMode
+    const postViewMode =
+      postViewModeFromStorage || postViewModeFromQueryParams || 'compact'
+    localStorage.setItem(storageKey, postViewMode)
     search.set('postMode', postViewMode)
-    setPostMode((search.get('postMode') as PostMode) ?? postViewMode)
+    setPostMode(postViewMode)
     setSortBy((search.get('sortBy') as SortBy) ?? 'default')
     setOrderBy((search.get('orderBy') as OrderBy) ?? 'desc')
     router.push(routeBuilder(Routes.Posts, search))
