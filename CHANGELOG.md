@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.1.11](https://github.com/van-space/Shiro/compare/v1.1.10...v1.1.11) (2024-08-25)
+
+
+### Reverts
+
+* revert page mode select ([d04bc2c](https://github.com/van-space/Shiro/commit/d04bc2c607febf3ace95a35ebe9560eff3f741e6))
+
+
+
 ## [1.1.10](https://github.com/van-space/Shiro/compare/v1.1.9...v1.1.10) (2024-08-25)
 
 
