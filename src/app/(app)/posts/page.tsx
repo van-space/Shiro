@@ -34,7 +34,10 @@ export default definePrerenderPage<Props>()({
     })
   },
   Component: async (props) => {
-    const { params } = props
+    const {
+      params,
+      searchParams: { postMode },
+    } = props as any
     const { data, pagination } = props.data
     const { page } = params
 
@@ -54,7 +57,7 @@ export default definePrerenderPage<Props>()({
                 as="li"
                 delay={index * 100}
               >
-                <PostItem data={item} />
+                <PostItem data={item} postMode={postMode} />
               </BottomToUpTransitionView>
             )
           })}

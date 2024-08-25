@@ -41,6 +41,7 @@ type HomeParams = Noop
 export type PostsParams = Pagination & {
   sortBy?: string
   orderBy?: 'desc' | 'asc'
+  postMode?: 'compact' | 'loose'
 }
 
 type PostParams = {

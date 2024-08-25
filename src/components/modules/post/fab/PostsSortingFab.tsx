@@ -2,21 +2,24 @@
 
 import clsx from 'clsx'
 import { atom, useAtom } from 'jotai'
-import { useRouter } from 'next/navigation'
-import { useCallback, useMemo } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useCallback, useEffect, useMemo } from 'react'
 
 import { FABPortable } from '~/components/ui/fab'
 import { FloatPanel } from '~/components/ui/float-panel/FloatPanel'
+import { Radio, RadioGroup } from '~/components/ui/radio'
 import { Select } from '~/components/ui/select'
 import { useEventCallback } from '~/hooks/common/use-event-callback'
 import { useRefValue } from '~/hooks/common/use-ref-value'
+import { isClientSide } from '~/lib/env'
 import { Noop } from '~/lib/noop'
+import { buildNSKey } from '~/lib/ns'
 import type { PostsParams } from '~/lib/route-builder'
 import { routeBuilder, Routes } from '~/lib/route-builder'
 
 type SortBy = 'default' | 'created' | 'modified'
 type OrderBy = 'asc' | 'desc'
-
+export type PostMode = 'compact' | 'loose'
 type SortByValues = {
   label: string
   value: SortBy
@@ -29,10 +32,25 @@ type OrderByValues = {
 
 const sortByAtom = atom<SortBy>('default')
 const orderByAtom = atom<OrderBy>('desc')
+const postModeAtom = atom<PostMode>('compact')
+const storageKey = buildNSKey('posts-view-mode')
 
 export const PostsSortingFab = () => {
   const [sortBy, setSortBy] = useAtom(sortByAtom)
   const [orderBy, setOrderBy] = useAtom(orderByAtom)
+  const [postMode, setPostMode] = useAtom(postModeAtom)
+  const routeParams = useSearchParams()
+  useEffect(() => {
+    if (!isClientSide) return
+    const postViewMode = localStorage.getItem(storageKey) as PostMode
+    if (postViewMode) setPostMode(postViewMode)
+    const search = new URLSearchParams(routeParams)
+    search.set('postMode', postViewMode)
+    setPostMode((search.get('postMode') as PostMode) ?? postViewMode)
+    setSortBy((search.get('sortBy') as SortBy) ?? 'default')
+    setOrderBy((search.get('orderBy') as OrderBy) ?? 'desc')
+    router.push(routeBuilder(Routes.Posts, search))
+  }, [])
 
   const sortByValues = useRefValue(
     () =>
@@ -68,14 +86,14 @@ export const PostsSortingFab = () => {
   const router = useRouter()
   const handleChange = useEventCallback(() => {
     const params = {} as PostsParams
+    if (postMode) params.postMode = postMode
     if (sortBy === 'default') {
-      router.push(routeBuilder(Routes.Posts, {}))
+      router.push(routeBuilder(Routes.Posts, params))
       return
     }
     if (orderBy) params.orderBy = orderBy
 
     if (sortBy) params.sortBy = sortBy
-
     router.replace(routeBuilder(Routes.Posts, params))
   })
 
@@ -85,7 +103,7 @@ export const PostsSortingFab = () => {
       triggerElement={useMemo(
         () => (
           <FABPortable onClick={Noop}>
-            <i className="icon-[mingcute--sort-descending-line]" />
+            <i className="icon-[mingcute--settings-5-line]" />
           </FABPortable>
         ),
         [],
@@ -124,6 +142,22 @@ export const PostsSortingFab = () => {
               })
             }, [])}
           />
+        </section>
+        <section className="mb-2 mt-4">
+          <div className="ml-1">列表模式</div>
+          <RadioGroup
+            defaultValue={postMode}
+            onValueChange={useCallback((value: PostMode) => {
+              setPostMode(value)
+              localStorage.setItem(storageKey, value)
+              requestAnimationFrame(() => {
+                handleChange()
+              })
+            }, [])}
+          >
+            <Radio label="紧凑模式" value="compact" />
+            <Radio label="预览模式" value="loose" />
+          </RadioGroup>
         </section>
       </main>
     </FloatPanel>
