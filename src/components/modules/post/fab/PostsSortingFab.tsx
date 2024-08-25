@@ -2,8 +2,8 @@
 
 import clsx from 'clsx'
 import { atom, useAtom } from 'jotai'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { useCallback, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
+import { useCallback, useMemo } from 'react'
 
 import { FABPortable } from '~/components/ui/fab'
 import { FloatPanel } from '~/components/ui/float-panel/FloatPanel'
@@ -11,7 +11,6 @@ import { Radio, RadioGroup } from '~/components/ui/radio'
 import { Select } from '~/components/ui/select'
 import { useEventCallback } from '~/hooks/common/use-event-callback'
 import { useRefValue } from '~/hooks/common/use-ref-value'
-import { isClientSide } from '~/lib/env'
 import { Noop } from '~/lib/noop'
 import { buildNSKey } from '~/lib/ns'
 import type { PostsParams } from '~/lib/route-builder'
@@ -39,21 +38,6 @@ export const PostsSortingFab = () => {
   const [sortBy, setSortBy] = useAtom(sortByAtom)
   const [orderBy, setOrderBy] = useAtom(orderByAtom)
   const [postMode, setPostMode] = useAtom(postModeAtom)
-  const routeParams = useSearchParams()
-  useEffect(() => {
-    if (!isClientSide) return
-    const postViewModeFromStorage = localStorage.getItem(storageKey) as PostMode
-    const search = new URLSearchParams(routeParams)
-    const postViewModeFromQueryParams = search.get('postMode') as PostMode
-    const postViewMode =
-      postViewModeFromStorage || postViewModeFromQueryParams || 'compact'
-    localStorage.setItem(storageKey, postViewMode)
-    search.set('postMode', postViewMode)
-    setPostMode(postViewMode)
-    setSortBy((search.get('sortBy') as SortBy) ?? 'default')
-    setOrderBy((search.get('orderBy') as OrderBy) ?? 'desc')
-    router.push(routeBuilder(Routes.Posts, search))
-  }, [])
 
   const sortByValues = useRefValue(
     () =>
@@ -89,9 +73,8 @@ export const PostsSortingFab = () => {
   const router = useRouter()
   const handleChange = useEventCallback(() => {
     const params = {} as PostsParams
-    if (postMode) params.postMode = postMode
     if (sortBy === 'default') {
-      router.push(routeBuilder(Routes.Posts, params))
+      router.push(routeBuilder(Routes.Posts, {}))
       return
     }
     if (orderBy) params.orderBy = orderBy
@@ -147,17 +130,8 @@ export const PostsSortingFab = () => {
           />
         </section>
         <section className="mb-2 mt-4">
-          <div className="ml-1">列表模式</div>
-          <RadioGroup
-            defaultValue={postMode}
-            onValueChange={useCallback((value: PostMode) => {
-              setPostMode(value)
-              localStorage.setItem(storageKey, value)
-              requestAnimationFrame(() => {
-                handleChange()
-              })
-            }, [])}
-          >
+          <div className="ml-1">列表模式(待完善)</div>
+          <RadioGroup defaultValue={postMode}>
             <Radio label="紧凑模式" value="compact" />
             <Radio label="预览模式" value="loose" />
           </RadioGroup>
