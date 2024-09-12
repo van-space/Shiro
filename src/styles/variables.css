@@ -34,7 +34,7 @@ details summary {
 }
 
 ::view-transition-new(root) {
-  animation: turnOff 800ms ease-in-out;
+  animation: light-to-dark  800ms ease-in-out;
 }
 ::view-transition-old(root) {
   animation: none;
@@ -50,7 +50,7 @@ details summary {
 }
 
 [data-theme='dark']::view-transition-new(root) {
-  animation: turnOn 800ms ease-in-out;
+  animation: dark-to-light 800ms ease-in-out;
 }
 ::view-transition-old(root) {
   animation: none;
@@ -62,5 +62,25 @@ details summary {
   }
   100% {
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+
+@keyframes light-to-dark {
+  0% {
+      clip-path: polygon(calc(14.05408vh + 100%) 0,calc(14.05408vh + 100%) 0,100% 100%,100% 100%)
+  }
+
+  to {
+      clip-path: polygon(0 0,calc(14.05408vh + 100%) 0,100% 100%,-14.05408vh 100%)
+  }
+}
+
+@keyframes dark-to-light {
+  0% {
+      clip-path: polygon(calc(14.05408vh + 100%) 0,calc(14.05408vh + 100%) 0,100% 100%,100% 100%)
+  }
+
+  to {
+      clip-path: polygon(0 0,calc(14.05408vh + 100%) 0,100% 100%,-14.05408vh 100%)
   }
 }
