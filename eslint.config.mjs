@@ -8,7 +8,7 @@ export default defineConfig(
     ignores: [],
     preferESM: false,
     react: 'next',
-    tailwindCSS: true,
+    tailwindCSS:true
   },
   {
     settings: {

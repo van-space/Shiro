@@ -80,7 +80,6 @@ export const TagDetailModal = (props: { name: string }) => {
       return (await apiClient.category.getTagByName(tagName)).data
     },
     staleTime: 1000 * 60 * 60 * 24,
-    meta: {},
   })
   const { dismissAll } = useModalStack()
   if (isLoading)

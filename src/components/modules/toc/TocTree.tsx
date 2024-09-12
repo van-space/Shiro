@@ -203,6 +203,7 @@ const MemoedItem = memo<{
         itemOffsetTop - containerHeight / 2 + itemHeight / 2
     }
   }, [isActive])
+
   return (
     <RightToLeftTransitionView
       timeout={

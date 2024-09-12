@@ -34,7 +34,7 @@ export default definePrerenderPage<Props>()({
     })
   },
   Component: async (props) => {
-    const { params } = props as any
+    const { params } = props
     const { data, pagination } = props.data
     const { page } = params
 

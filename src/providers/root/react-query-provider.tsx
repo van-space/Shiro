@@ -37,6 +37,7 @@ export const queryClient = new QueryClient({
     },
   },
 })
+
 declare module '@tanstack/react-query' {
   interface Meta {
     queryMeta: { persist?: boolean }
@@ -44,6 +45,7 @@ declare module '@tanstack/react-query' {
 
   interface Register extends Meta {}
 }
+
 const persistOptions: Omit<PersistQueryClientOptions, 'queryClient'> = {
   persister: asyncStoragePersister,
   maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week

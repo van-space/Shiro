@@ -17,6 +17,7 @@ export const PostItem = memo<{ data: PostModel }>(function PostItem({ data }) {
   const hasImage = data.images?.length > 0 && data.images[0].src
   const categorySlug = data.category?.slug
   const postLink = `/posts/${categorySlug}/${data.slug}`
+
   return (
     <Link
       href={postLink}
