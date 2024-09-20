@@ -86,7 +86,7 @@ const GridZoomImage: FC<{ src: string }> = memo(({ src }) => {
 
   return (
     <div
-      className="relative flex size-full overflow-hidden rounded-md bg-cover bg-center center"
+      className="center relative flex size-full overflow-hidden rounded-md bg-cover bg-center"
       style={{
         backgroundColor: accent,
       }}

@@ -258,7 +258,7 @@ export const DataStat = () => {
                 {formatNumber(stat.value)}
               </div>
 
-              <div className="absolute right-4 top-1/2 flex -translate-y-1/2 text-[30px] center">
+              <div className="center absolute right-4 top-1/2 flex -translate-y-1/2 text-[30px]">
                 {stat.icon}
               </div>
 

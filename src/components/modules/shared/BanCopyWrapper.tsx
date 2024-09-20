@@ -55,7 +55,7 @@ export const BanCopyWrapper: FC<PropsWithChildren> = (props) => {
               <DialogOverlay />
               <DialogContent asChild>
                 <m.div
-                  className="fixed inset-0 z-[11] flex flex-col gap-4 center"
+                  className="center fixed inset-0 z-[11] flex flex-col gap-4"
                   exit={{
                     opacity: 0,
                   }}

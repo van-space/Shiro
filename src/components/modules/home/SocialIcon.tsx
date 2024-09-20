@@ -117,7 +117,7 @@ export const SocialIcon = memo((props: SocialIconProps) => {
       type="tooltip"
       triggerElement={
         <MotionButtonBase
-          className="flex aspect-square size-10 rounded-full text-2xl text-white center"
+          className="center flex aspect-square size-10 rounded-full text-2xl text-white"
           style={{
             background: iconBg,
           }}
@@ -125,7 +125,7 @@ export const SocialIcon = memo((props: SocialIconProps) => {
           <a
             target="_blank"
             href={href}
-            className="flex center"
+            className="center flex"
             rel="noreferrer"
           >
             {Icon}

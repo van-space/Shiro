@@ -168,7 +168,7 @@ const ExcalidrawImpl = forwardRef<InternelExcalidrawRefObject, ExcalidrawProps>(
         className={clsxm('relative h-[500px] w-full', className)}
       >
         {isLoading && (
-          <div className="absolute inset-0 z-10 flex center">
+          <div className="center absolute inset-0 z-10 flex">
             <div className="loading loading-spinner" />
           </div>
         )}

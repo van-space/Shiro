@@ -142,7 +142,7 @@ const Hero = () => {
             <span className="opacity-80">{description}</span>
           </BottomToUpTransitionView>
 
-          <ul className="mx-[60px] mt-8 flex flex-wrap gap-6 center lg:mx-auto lg:mt-28 lg:justify-start lg:gap-4">
+          <ul className="center mx-[60px] mt-8 flex flex-wrap gap-6 lg:mx-auto lg:mt-28 lg:justify-start lg:gap-4">
             {Object.entries(socialIds || noopObj).map(
               ([type, id]: any, index) => {
                 if (!isSupportIcon(type)) return null
@@ -181,9 +181,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={softBouncePreset}
           className={clsx(
-            'inset-x-0 bottom-0 mt-12 flex flex-col center lg:absolute lg:mt-0',
+            'center inset-x-0 bottom-0 mt-12 flex flex-col lg:absolute lg:mt-0',
 
-            'text-neutral-800/80 center dark:text-neutral-200/80',
+            'center text-neutral-800/80 dark:text-neutral-200/80',
           )}
         >
           <small className="text-center">
@@ -273,7 +273,7 @@ const Windsock = () => {
   const { present: presentSubscribe } = usePresentSubscribeModal()
   return (
     <>
-      <div className="mt-28 flex flex-col center">
+      <div className="center mt-28 flex flex-col">
         <div className="my-5 text-2xl font-medium">风向标</div>
         <div className="mb-24 opacity-90">去到别去看看？</div>
         <ul className="flex flex-col flex-wrap gap-2 gap-y-8 opacity-80 lg:flex-row">
@@ -325,7 +325,7 @@ const Windsock = () => {
 
       <div className="mt-24 flex justify-center gap-4">
         <StyledButton
-          className="flex gap-2 bg-red-400 center"
+          className="center flex gap-2 bg-red-400"
           onClick={() => {
             apiClient
               .proxy('like_this')
@@ -364,7 +364,7 @@ const Windsock = () => {
         </StyledButton>
 
         <StyledButton
-          className="flex gap-2 center"
+          className="center flex gap-2"
           onClick={() => {
             presentSubscribe()
           }}

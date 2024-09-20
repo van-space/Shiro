@@ -165,7 +165,7 @@ const RoomsInfo = () => {
 
   if (!data)
     return (
-      <div className="flex size-6 center">
+      <div className="center flex size-6">
         <div className="loading loading-spinner" />
       </div>
     )

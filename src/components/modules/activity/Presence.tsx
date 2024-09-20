@@ -1,6 +1,5 @@
 'use client'
 
-import { useUser } from '@clerk/nextjs'
 import { useQuery } from '@tanstack/react-query'
 import clsx from 'clsx'
 import type { FC } from 'react'
@@ -25,6 +24,7 @@ import {
   useOwner,
   useSocketSessionId,
 } from '~/atoms/hooks'
+import { useSessionReader } from '~/atoms/hooks/reader'
 import { getServerTime } from '~/components/common/SyncServerTime'
 import { FloatPopover } from '~/components/ui/float-popover'
 import { RootPortal } from '~/components/ui/portal'
@@ -61,7 +61,7 @@ const PresenceImpl = () => {
 
   const identity = useSocketSessionId()
 
-  const clerkUser = useUser()
+  const sessionReader = useSessionReader()
   const owner = useOwner()
 
   const isOwnerLogged = useIsLogged()
@@ -69,16 +69,11 @@ const PresenceImpl = () => {
     () =>
       isOwnerLogged
         ? owner?.name
-        : clerkUser.isSignedIn
-          ? clerkUser.user.fullName
+        : sessionReader
+          ? sessionReader.name
           : globalThis?.localStorage.getItem(`${commentStoragePrefix}author`) ||
             '',
-    [
-      clerkUser.isSignedIn,
-      clerkUser.user?.fullName,
-      isOwnerLogged,
-      owner?.name,
-    ],
+    [isOwnerLogged, owner?.name, sessionReader],
   )
 
   const update = useCallback(
@@ -107,7 +102,6 @@ const PresenceImpl = () => {
       updateWithPercent()
     }
     window.addEventListener(EmitKeyMap.SocketConnected, handler)
-
     return () => {
       window.removeEventListener(EmitKeyMap.SocketConnected, handler)
     }

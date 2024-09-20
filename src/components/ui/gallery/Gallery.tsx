@@ -182,7 +182,7 @@ export const Gallery: FC<GalleryProps> = (props) => {
               const index = currentIndex - 1
               handleScrollTo(index)
             }}
-            className="border-border pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 center hover:opacity-100"
+            className="border-border center pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 hover:opacity-100"
           >
             <i className="icon-[mingcute--left-fill]" />
           </MotionButtonBase>
@@ -198,7 +198,7 @@ export const Gallery: FC<GalleryProps> = (props) => {
               const index = currentIndex + 1
               handleScrollTo(index)
             }}
-            className="border-border pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 center hover:opacity-100"
+            className="border-border center pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 hover:opacity-100"
           >
             <i className="icon-[mingcute--right-fill]" />
           </MotionButtonBase>

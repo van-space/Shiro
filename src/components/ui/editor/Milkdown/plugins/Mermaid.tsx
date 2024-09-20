@@ -25,6 +25,7 @@ const MermaidRender = () => {
   const modalStack = useModalStack()
 
   const handleEdit = () => {
+    // eslint-disable-next-line @eslint-react/no-nested-components
     const Content: FC<ModalContentPropsInternal> = ({ dismiss }) => {
       const deleteNode = () => {
         const pos = getPos()
@@ -83,7 +84,7 @@ const MermaidRender = () => {
     return (
       <div
         ref={contentRef}
-        className="my-4 flex h-12 w-full max-w-full cursor-pointer rounded bg-slate-100 text-sm center dark:bg-neutral-800"
+        className="center my-4 flex h-12 w-full max-w-full cursor-pointer rounded bg-slate-100 text-sm dark:bg-neutral-800"
         onClick={handleEdit}
         contentEditable={false}
       >

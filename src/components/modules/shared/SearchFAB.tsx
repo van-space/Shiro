@@ -82,7 +82,7 @@ const SearchPanel = () => {
         {panelOpen && (
           <Dialog.Portal>
             <Dialog.Content>
-              <div className="fixed inset-0 z-20 flex center">
+              <div className="center fixed inset-0 z-20 flex">
                 <div
                   className="fixed inset-0 z-[-1]"
                   onClick={() => {
@@ -281,7 +281,7 @@ const SearchPanelImpl = () => {
           )}
 
           {data.length === 0 && isLoading && (
-            <div className="flex h-full grow center">
+            <div className="center flex h-full grow">
               <div className="loading loading-spinner" />
             </div>
           )}
@@ -342,7 +342,7 @@ const SearchItem = memo(function Item({
     <li
       className={clsx(
         'relative flex w-full justify-between px-1',
-        'before:absolute before:inset-0 before:rounded-md before:content-auto',
+        'before:content-auto before:absolute before:inset-0 before:rounded-md',
         'before:z-0 hover:before:bg-zinc-200/80 dark:hover:before:bg-zinc-800/80',
         isSelect && 'before:bg-zinc-200/80 dark:before:bg-zinc-800/80',
       )}
