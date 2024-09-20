@@ -3,6 +3,11 @@ import type { Metadata } from 'next'
 
 import { AckRead } from '~/components/common/AckRead'
 import { ClientOnly } from '~/components/common/ClientOnly'
+import {
+  buildRoomName,
+  Presence,
+  RoomProvider,
+} from '~/components/modules/activity'
 import { CommentAreaRootLazy } from '~/components/modules/comment'
 import {
   PostActionAside,
@@ -114,7 +119,7 @@ const PostPage = ({ data }: { data: ModelWithLiked<PostModel> }) => {
         </div>
         <WrappedElementProvider eoaDetect>
           <ReadIndicatorForMobile />
-
+          <Presence />
           <PostMarkdownImageRecordProvider>
             <MarkdownSelection>
               <article className="prose">
@@ -163,7 +168,9 @@ export default definePrerenderPage<PageParams>()({
         <CurrentPostDataProvider data={data} />
         <div className="relative flex min-h-[120px] grid-cols-[auto,200px] lg:grid">
           <BottomToUpTransitionView className="min-w-0">
-            <PostPage data={data} />
+            <RoomProvider roomName={buildRoomName(data.id)}>
+              <PostPage data={data} />
+            </RoomProvider>
 
             <BottomToUpSoftScaleTransitionView delay={500}>
               <CommentAreaRootLazy
