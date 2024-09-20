@@ -145,17 +145,15 @@ export const TocTree: Component<
         className={clsx('scrollbar-none overflow-auto', scrollClassname)}
         ref={scrollContainerRef}
       >
-        {toc?.map((heading) => {
-          return (
-            <MemoedItem
-              heading={heading}
-              isActive={heading.anchorId === activeId}
-              key={heading.title}
-              rootDepth={rootDepth}
-              onClick={handleScrollTo}
-            />
-          )
-        })}
+        {toc?.map((heading) => (
+          <MemoedItem
+            heading={heading}
+            isActive={heading.anchorId === activeId}
+            key={`${heading.title}-${heading.index}`}
+            rootDepth={rootDepth}
+            onClick={handleScrollTo}
+          />
+        ))}
       </ul>
       {accessoryElement && (
         <li className="shrink-0">
@@ -220,7 +218,7 @@ const MemoedItem = memo<{
       {isActive && (
         <m.span
           layoutId="active-toc-item"
-          layout="position"
+          layout
           className="absolute inset-y-[3px] left-0 w-[2px] rounded-sm bg-accent"
         />
       )}
