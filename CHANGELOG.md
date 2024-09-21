@@ -1,5 +1,34 @@
 # CHANGELOG
 
+# [1.2.0](https://github.com/van-space/Shiro/compare/v1.1.6...v1.2.0) (2024-09-21)
+
+
+### Bug Fixes
+
+* auto switch legacy comment if no providers ([2b6c702](https://github.com/van-space/Shiro/commit/2b6c702e3ecfa32a97dd92282ca77c126f45e2fc))
+* **deps:** update all non-major dependencies ([02a24b9](https://github.com/van-space/Shiro/commit/02a24b906e4bd906d5c7ce33b6451056e560b99f))
+* import markdown modal ([5f4a878](https://github.com/van-space/Shiro/commit/5f4a878b408f150dd7aaeff79ef672cbbda94588))
+* katex parser ([a5173e0](https://github.com/van-space/Shiro/commit/a5173e02369556bc8d8409129f019916bdb732be))
+* next-auth ([664c351](https://github.com/van-space/Shiro/commit/664c3513dd73a0fdeed93335c21332c34c89e603))
+* storybook ([8c301db](https://github.com/van-space/Shiro/commit/8c301db2fef79ddd7addcc6b14d3052e2aa4c4d4))
+* toc fab sheet close transition ([d885b87](https://github.com/van-space/Shiro/commit/d885b87c55fac2ef17c22faa88cf2263bfa557ff))
+
+
+### Features
+
+* add admin url ([f26f963](https://github.com/van-space/Shiro/commit/f26f963a171670f04a7a00f6ddcf1023fda754dc))
+* comment info get from reader ([e351fe6](https://github.com/van-space/Shiro/commit/e351fe68daebe5b8ec4e117bd10a10b4e003da45))
+* fetch app url after login ([2120c2e](https://github.com/van-space/Shiro/commit/2120c2eef2b3f0165c939b8fe8d5b7a057fab52d))
+* make oauth great again ([31d8275](https://github.com/van-space/Shiro/commit/31d8275c74678c7116fa02a564444323a2462f71))
+* update spring scroll preset ([f747f9c](https://github.com/van-space/Shiro/commit/f747f9c7ddaf4e0bf2f456edaa43ef569141d90a))
+
+
+### Reverts
+
+* activity ([ac54fcd](https://github.com/van-space/Shiro/commit/ac54fcd959a3a1f8131f7f1ed8efe1e37189e4ce))
+
+
+
 ## [1.1.6](https://github.com/van-space/Shiro/compare/v1.1.11...v1.1.6) (2024-09-12)
 
 
