@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.2.1](https://github.com/van-space/Shiro/compare/v1.2.0...v1.2.1) (2024-09-21)
+
+
+### Bug Fixes
+
+* activity presence ([9be8ec5](https://github.com/van-space/Shiro/commit/9be8ec57a276cd0effad60d1899bbc319d3ce875))
+
+
+
 # [1.2.0](https://github.com/van-space/Shiro/compare/v1.1.6...v1.2.0) (2024-09-21)
 
 
