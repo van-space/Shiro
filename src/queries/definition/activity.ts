@@ -9,7 +9,7 @@ export const activity = {
       queryKey: ['activity', 'presence', roomName],
       queryFn: async () => {
         const res = await apiClient.activity.getPresence(roomName)
-        resetActivityPresence(res)
+        resetActivityPresence(res.data)
         return res
       },
     }),
