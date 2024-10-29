@@ -22,7 +22,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "buffer": "6.0.3",
     "concurrently": "^8.2.2",
-    "unplugin-macros": "0.13.3",
+    "unplugin-macros": "0.13.5",
     "vite-tsconfig-paths": "^5.0.1"
   }
 }
