@@ -147,8 +147,8 @@ importers:
         specifier: 1.12.1
         version: 1.12.1(bufferutil@4.0.8)(typescript@5.6.3)(zod@3.23.8)
       daisyui:
-        specifier: 4.12.13
-        version: 4.12.13(postcss@8.4.47)
+        specifier: 4.12.14
+        version: 4.12.14(postcss@8.4.47)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -159,8 +159,8 @@ importers:
         specifier: 4.12.0
         version: 4.12.0(react@18.3.1)
       foxact:
-        specifier: 0.2.39
-        version: 0.2.39(react@18.3.1)
+        specifier: 0.2.40
+        version: 0.2.40(react@18.3.1)
       framer-motion:
         specifier: 11.5.4
         version: 11.5.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -210,8 +210,8 @@ importers:
         specifier: 11.2.1
         version: 11.2.1
       nanoid:
-        specifier: ^5.0.7
-        version: 5.0.7
+        specifier: ^5.0.8
+        version: 5.0.8
       next:
         specifier: 14.2.16
         version: 14.2.16(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3144,8 +3144,8 @@ packages:
   dagre-d3-es@7.0.10:
     resolution: {integrity: sha512-qTCQmEhcynucuaZgY5/+ti3X/rnszKZhEQH/ZdWdtP1tA/y3VoHJzcVrO9pjjJCNpigfscAtoUB5ONcd2wNn0A==}
 
-  daisyui@4.12.13:
-    resolution: {integrity: sha512-BnXyQoOByUF/7wSdIKubyhXxbtL8gxwY3u2cNMkxGP39TSVJqMmlItqtpY903fQnLI/NokC+bc+ZV+PEPsppPw==}
+  daisyui@4.12.14:
+    resolution: {integrity: sha512-hA27cdBasdwd4/iEjn+aidoCrRroDuo3G5W9NDKaVCJI437Mm/3eSL/2u7MkZ0pt8a+TrYF3aT2pFVemTS3how==}
     engines: {node: '>=16.9.0'}
 
   dayjs@1.11.13:
@@ -3636,8 +3636,8 @@ packages:
     resolution: {integrity: sha512-0iirZp3uVDjVGt9p49aTaqjk84TrglENEDuqfdlZQ1roC9CWlPk6Avf8EEnZNcAqPonwkG35x4n3ww/1THYAeQ==}
     engines: {node: '>= 12.20'}
 
-  foxact@0.2.39:
-    resolution: {integrity: sha512-iIe0eakDQuGL5ArCVzijffkSAm6jNGC3apTkUWBarvnIZuX6tmx/nhXYFNirKG4Vxo+fM3sL6GP36BE/3w4xng==}
+  foxact@0.2.40:
+    resolution: {integrity: sha512-XqgFJ5vpTUL9SPAEmFFRiJtJ5B52f3GtGW+VAs7nTIMIrz9OsyUr72YrBMNfP9bINL6lPd5KrO3xz7gNcvybzw==}
     peerDependencies:
       react: '*'
     peerDependenciesMeta:
@@ -4492,8 +4492,8 @@ packages:
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
 
-  nanoid@5.0.7:
-    resolution: {integrity: sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==}
+  nanoid@5.0.8:
+    resolution: {integrity: sha512-TcJPw+9RV9dibz1hHUzlLVy8N4X9TnwirAjrU08Juo6BNKggzVfP2ZJ/3ZUSq15Xl5i85i+Z89XBO90pB2PghQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -7426,7 +7426,7 @@ snapshots:
       '@milkdown/utils': 7.5.0(@milkdown/core@7.5.0(@milkdown/ctx@7.5.0)(@milkdown/prose@7.5.0)(@milkdown/transformer@7.5.0(@milkdown/prose@7.5.0)))(@milkdown/ctx@7.5.0)(@milkdown/prose@7.5.0)(@milkdown/transformer@7.5.0(@milkdown/prose@7.5.0))
       '@types/dompurify': 3.0.5
       mermaid: 10.9.1
-      nanoid: 5.0.7
+      nanoid: 5.0.8
       tslib: 2.6.2
       unist-util-visit: 5.0.0
     transitivePeerDependencies:
@@ -7541,7 +7541,7 @@ snapshots:
       '@milkdown/exception': 7.5.0
       '@milkdown/prose': 7.5.0
       '@milkdown/transformer': 7.5.0(@milkdown/prose@7.5.0)
-      nanoid: 5.0.7
+      nanoid: 5.0.8
       tslib: 2.6.2
 
   '@mx-space/api-client@1.16.1': {}
@@ -9431,7 +9431,7 @@ snapshots:
       d3: 7.9.0
       lodash-es: 4.17.21
 
-  daisyui@4.12.13(postcss@8.4.47):
+  daisyui@4.12.14(postcss@8.4.47):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
@@ -10049,7 +10049,7 @@ snapshots:
       node-domexception: 1.0.0
       web-streams-polyfill: 4.0.0-beta.3
 
-  foxact@0.2.39(react@18.3.1):
+  foxact@0.2.40(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       server-only: 0.0.1
@@ -11161,7 +11161,7 @@ snapshots:
 
   nanoid@4.0.2: {}
 
-  nanoid@5.0.7: {}
+  nanoid@5.0.8: {}
 
   natural-compare@1.4.0: {}
 
