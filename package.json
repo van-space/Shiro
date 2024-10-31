@@ -142,7 +142,7 @@
     "cross-env": "7.0.3",
     "dotenv": "16.4.5",
     "eslint": "9.10.0",
-    "eslint-config-hyoban": "3.1.11",
+    "eslint-config-hyoban": "3.1.12",
     "lint-staged": "15.2.10",
     "postcss": "8.4.47",
     "postcss-import": "16.1.0",
