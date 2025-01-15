@@ -21,6 +21,7 @@ import {
   ReactQueryProvider,
   ReactQueryProviderForDashboard,
 } from './react-query-provider'
+import { SeasonalThemeProvider } from './seasonal-theme-provider'
 import { SocketContainer } from './socket-provider'
 
 const loadFeatures = () =>
@@ -45,17 +46,19 @@ const webappContexts: JSX.Element[] = [
 
 export function WebAppProviders({ children }: PropsWithChildren) {
   return (
-    <ProviderComposer contexts={webappContexts}>
-      {children}
+    <SeasonalThemeProvider>
+      <ProviderComposer contexts={webappContexts}>
+        {children}
 
-      <SocketContainer />
-      <ModalStackProvider key="modalStackProvider" />
-      <EventProvider key="viewportProvider" />
-      <PageScrollInfoProvider key="PageScrollInfoProvider" />
-      <DebugProvider key="debugProvider" />
+        <SocketContainer />
+        <ModalStackProvider key="modalStackProvider" />
+        <EventProvider key="viewportProvider" />
+        <PageScrollInfoProvider key="PageScrollInfoProvider" />
+        <DebugProvider key="debugProvider" />
 
-      <PeekPortal />
-    </ProviderComposer>
+        <PeekPortal />
+      </ProviderComposer>
+    </SeasonalThemeProvider>
   )
 }
 const dashboardContexts: JSX.Element[] = [
