@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## [1.2.2](https://github.com/van-space/Shiro/compare/v1.2.1...v1.2.2) (2025-01-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([7f2efcf](https://github.com/van-space/Shiro/commit/7f2efcff7c955f23c87d261bb563daa7c462c8eb))
+* **deps:** update all non-major dependencies ([94870a6](https://github.com/van-space/Shiro/commit/94870a6c5d4dca7a00e9a38c9f99bcdb9f57fb02))
+* **deps:** update all non-major dependencies ([9bbed48](https://github.com/van-space/Shiro/commit/9bbed4807d0b27b3d289989c86595d7a4346a052))
+* **deps:** update all non-major dependencies ([#42](https://github.com/van-space/Shiro/issues/42)) ([c3977cf](https://github.com/van-space/Shiro/commit/c3977cfed62cd254522345fa85e6324ca9b32157))
+* **deps:** update dependency vite to v5.4.6 [security] ([7b01c85](https://github.com/van-space/Shiro/commit/7b01c8557c471d7e999cfdd7b9adddfc65583386))
+
+
+### Features
+
+* 增加特定节日主题 ([7f2d7fd](https://github.com/van-space/Shiro/commit/7f2d7fd913eed891c8167f85f592416ff8d9f34a))
+
+
+
 ## [1.2.1](https://github.com/van-space/Shiro/compare/v1.2.0...v1.2.1) (2024-09-21)
 
 
