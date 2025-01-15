@@ -46,8 +46,8 @@ const webappContexts: JSX.Element[] = [
 
 export function WebAppProviders({ children }: PropsWithChildren) {
   return (
-    <SeasonalThemeProvider>
-      <ProviderComposer contexts={webappContexts}>
+    <ProviderComposer contexts={webappContexts}>
+      <SeasonalThemeProvider>
         {children}
 
         <SocketContainer />
@@ -57,8 +57,8 @@ export function WebAppProviders({ children }: PropsWithChildren) {
         <DebugProvider key="debugProvider" />
 
         <PeekPortal />
-      </ProviderComposer>
-    </SeasonalThemeProvider>
+      </SeasonalThemeProvider>
+    </ProviderComposer>
   )
 }
 const dashboardContexts: JSX.Element[] = [
