@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.2.3](https://github.com/van-space/Shiro/compare/v1.2.2...v1.2.3) (2025-01-15)
+
+
+### Features
+
+* 主题通知 ([1fbb0a9](https://github.com/van-space/Shiro/commit/1fbb0a91d24d919ca6fddcdb7e621b421ee1874e))
+
+
+
 ## [1.2.2](https://github.com/van-space/Shiro/compare/v1.2.1...v1.2.2) (2025-01-15)
 
 
