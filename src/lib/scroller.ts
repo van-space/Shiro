@@ -1,7 +1,7 @@
 'use client'
 
-import type { Spring } from 'framer-motion'
-import { animateValue } from 'framer-motion'
+import type { Spring } from 'motion/react'
+import { animateValue } from 'motion/react'
 
 const spring: Spring = {
   type: 'spring',
@@ -53,11 +53,10 @@ export const springScrollToElement = (element: HTMLElement, delta = 40) => {
 }
 
 const calculateElementTop = (el: HTMLElement) => {
-  let top = 0,
-    _el = el
-  while (_el) {
-    top += _el.offsetTop
-    _el = _el.offsetParent as HTMLElement
+  let top = 0
+  while (el) {
+    top += el.offsetTop
+    el = el.offsetParent as HTMLElement
   }
   return top
 }

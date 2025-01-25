@@ -59,7 +59,7 @@ export const NoteMetaReadCount = () => {
     <>
       {dividerVertical}
       <span className={sectionBlockClassName} key="readcount">
-        <i className="icon-[mingcute--book-6-line]" />
+        <i className="i-mingcute-book-6-line" />
 
         <span className="font-medium">
           <NumberSmoothTransition>{read}</NumberSmoothTransition>
@@ -76,7 +76,7 @@ export const NoteMetaLikeCount = () => {
     <>
       {dividerVertical}
       <span className={sectionBlockClassName} key="linkcount">
-        <i className="icon-[mingcute--heart-line]" />
+        <i className="i-mingcute-heart-line" />
         <span className="font-medium">
           <NumberSmoothTransition>{like}</NumberSmoothTransition>
         </span>

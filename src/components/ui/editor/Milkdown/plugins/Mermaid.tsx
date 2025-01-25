@@ -25,7 +25,6 @@ const MermaidRender = () => {
   const modalStack = useModalStack()
 
   const handleEdit = () => {
-    // eslint-disable-next-line @eslint-react/no-nested-components
     const Content: FC<ModalContentPropsInternal> = ({ dismiss }) => {
       const deleteNode = () => {
         const pos = getPos()

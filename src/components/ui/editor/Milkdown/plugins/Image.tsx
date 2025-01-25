@@ -89,7 +89,7 @@ const Image = () => {
             variant="secondary"
             className="center box-content flex size-6 rounded-full p-2"
           >
-            <i className="icon-[mingcute--edit-line] text-[16px]" />
+            <i className="i-mingcute-edit-line text-[16px]" />
           </StyledButton>
         </div>
         {!isOnline && (
@@ -101,7 +101,7 @@ const Image = () => {
                 onClick={handleUploadImage}
                 className="center absolute bottom-1 right-1 box-content flex rounded-full bg-base-100 text-red-500"
               >
-                <i className="icon-[mingcute--warning-line] text-[24px]" />
+                <i className="i-mingcute-warning-line text-[24px]" />
               </MotionButtonBase>
             }
           >

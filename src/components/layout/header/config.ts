@@ -8,12 +8,10 @@ import {
   FaSolidDotCircle,
   FaSolidFeatherAlt,
   FaSolidHistory,
-  FaSolidUserFriends,
   IcTwotoneSignpost,
   IonBook,
   MdiFlask,
   MdiLightbulbOn20,
-  // RMixPlanet,
 } from '~/components/icons/menu-collection'
 
 export interface IHeaderMenu {
@@ -71,16 +69,16 @@ export const headerMenuConfig: IHeaderMenu[] = [
         title: '专栏',
         path: '/notes/topics',
         icon: h('i', {
-          className: 'icon-[mingcute--align-bottom-fill] flex center',
+          className: 'i-mingcute-align-bottom-fill flex center',
         }),
       },
     ],
   },
-  {
-    title: '友链',
-    icon: h(FaSolidUserFriends),
-    path: '/friends',
-  },
+  // {
+  //   title: '友链',
+  //   icon: h(FaSolidUserFriends),
+  //   path: '/friends',
+  // },
 
   {
     title: '更多',

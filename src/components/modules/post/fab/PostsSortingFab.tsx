@@ -7,18 +7,16 @@ import { useCallback, useMemo } from 'react'
 
 import { FABPortable } from '~/components/ui/fab'
 import { FloatPanel } from '~/components/ui/float-panel/FloatPanel'
-import { Radio, RadioGroup } from '~/components/ui/radio'
 import { Select } from '~/components/ui/select'
 import { useEventCallback } from '~/hooks/common/use-event-callback'
 import { useRefValue } from '~/hooks/common/use-ref-value'
 import { Noop } from '~/lib/noop'
-import { buildNSKey } from '~/lib/ns'
 import type { PostsParams } from '~/lib/route-builder'
 import { routeBuilder, Routes } from '~/lib/route-builder'
 
 type SortBy = 'default' | 'created' | 'modified'
 type OrderBy = 'asc' | 'desc'
-export type PostMode = 'compact' | 'loose'
+
 type SortByValues = {
   label: string
   value: SortBy
@@ -31,13 +29,10 @@ type OrderByValues = {
 
 const sortByAtom = atom<SortBy>('default')
 const orderByAtom = atom<OrderBy>('desc')
-const postModeAtom = atom<PostMode>('compact')
-const storageKey = buildNSKey('posts-view-mode')
 
 export const PostsSortingFab = () => {
   const [sortBy, setSortBy] = useAtom(sortByAtom)
   const [orderBy, setOrderBy] = useAtom(orderByAtom)
-  const [postMode, setPostMode] = useAtom(postModeAtom)
 
   const sortByValues = useRefValue(
     () =>
@@ -80,6 +75,7 @@ export const PostsSortingFab = () => {
     if (orderBy) params.orderBy = orderBy
 
     if (sortBy) params.sortBy = sortBy
+
     router.replace(routeBuilder(Routes.Posts, params))
   })
 
@@ -89,7 +85,7 @@ export const PostsSortingFab = () => {
       triggerElement={useMemo(
         () => (
           <FABPortable onClick={Noop}>
-            <i className="icon-[mingcute--settings-5-line]" />
+            <i className="i-mingcute-sort-descending-line" />
           </FABPortable>
         ),
         [],
@@ -128,13 +124,6 @@ export const PostsSortingFab = () => {
               })
             }, [])}
           />
-        </section>
-        <section className="mb-2 mt-4">
-          <div className="ml-1">列表模式(待完善)</div>
-          <RadioGroup defaultValue={postMode}>
-            <Radio label="紧凑模式" value="compact" />
-            <Radio label="预览模式" value="loose" />
-          </RadioGroup>
         </section>
       </main>
     </FloatPanel>

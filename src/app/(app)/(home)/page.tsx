@@ -2,9 +2,9 @@
 
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import clsx from 'clsx'
-import { m } from 'framer-motion'
+import { m } from 'motion/react'
 import Image from 'next/image'
-import type React from 'react'
+import type * as React from 'react'
 import { createElement } from 'react'
 
 import { ErrorBoundary } from '~/components/common/ErrorBoundary'
@@ -190,7 +190,7 @@ const Hero = () => {
             当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。
           </small>
           <span className="mt-8 animate-bounce">
-            <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
+            <i className="i-mingcute-right-line rotate-90 text-2xl" />
           </span>
         </m.div>
       </TwoColumnLayout>
@@ -339,7 +339,7 @@ const Windsock = () => {
             toast('谢谢你！', undefined, {
               iconElement: (
                 <m.i
-                  className="icon-[mingcute--heart-fill] text-uk-red-light"
+                  className="i-mingcute-heart-fill text-uk-red-light"
                   initial={{
                     scale: 0.96,
                   }}
@@ -357,7 +357,7 @@ const Windsock = () => {
             })
           }}
         >
-          喜欢本站 <i className="icon-[mingcute--heart-fill]" />{' '}
+          喜欢本站 <i className="i-mingcute-heart-fill" />{' '}
           <NumberSmoothTransition>
             {count as any as string}
           </NumberSmoothTransition>
@@ -370,7 +370,7 @@ const Windsock = () => {
           }}
         >
           订阅
-          <i className="icon-[material-symbols--notifications-active]" />
+          <i className="i-material-symbols-notifications-active" />
         </StyledButton>
       </div>
     </>

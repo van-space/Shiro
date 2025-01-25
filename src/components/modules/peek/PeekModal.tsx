@@ -1,4 +1,4 @@
-import { m } from 'framer-motion'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import type { PropsWithChildren } from 'react'
 
@@ -42,7 +42,7 @@ export const PeekModal = (
           href={props.to}
           onClick={dismissAll}
         >
-          <i className="icon-[mingcute--fullscreen-2-line] text-lg" />
+          <i className="i-mingcute-fullscreen-2-line text-lg" />
           <span className="sr-only">Go to this link</span>
         </Link>
 
@@ -50,7 +50,7 @@ export const PeekModal = (
           className="center flex size-8 rounded-full p-1 shadow-sm ring-1 ring-zinc-200 dark:ring-neutral-800"
           onClick={dismissTop}
         >
-          <i className="icon-[mingcute--close-line] text-lg" />
+          <i className="i-mingcute-close-line text-lg" />
           <span className="sr-only">Dimiss</span>
         </button>
       </m.div>

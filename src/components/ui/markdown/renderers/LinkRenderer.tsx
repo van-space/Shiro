@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import type React from 'react'
+import type * as React from 'react'
 import type { FC, PropsWithChildren, ReactNode } from 'react'
 import { Suspense, useMemo } from 'react'
 
@@ -17,6 +17,8 @@ import {
   isGithubRepoUrl,
   isGithubUrl,
   isLeetCodeUrl,
+  isNeteaseMusicSongUrl,
+  isQQMusicSongUrl,
   isSelfArticleUrl,
   isTMDBUrl,
   isTweetUrl,
@@ -152,6 +154,29 @@ export const BlockLinkRenderer = ({
       )
     }
 
+    case isNeteaseMusicSongUrl(url): {
+      const urlString = url.toString().replaceAll('/#/', '/')
+      const _url = new URL(urlString)
+      const id = _url.searchParams.get('id') ?? ''
+      return (
+        <LinkCard
+          fallbackUrl={url.toString()}
+          source={LinkCardSource.NeteaseMusicSong}
+          id={id}
+        />
+      )
+    }
+
+    case isQQMusicSongUrl(url): {
+      return (
+        <LinkCard
+          fallbackUrl={url.toString()}
+          source={LinkCardSource.QQMusicSong}
+          id={url.pathname.split('/')[4]}
+        />
+      )
+    }
+
     case isBilibiliVideoUrl(url): {
       const { id } = parseBilibiliVideoUrl(url)
 
@@ -266,12 +291,27 @@ const GithubUrlRenderL: FC<{
       const splitString = afterTypeString.split('/')
       const ref = splitString[0]
       const path = ref ? splitString.slice(1).join('/') : afterTypeString
+      const matchResult = url.hash.match(/L\d+/g)
+      let startLineNumber = 0
+      let endLineNumber
+      if (!matchResult) {
+        startLineNumber = 0
+        endLineNumber = undefined
+      } else if (matchResult.length === 1) {
+        startLineNumber = Number.parseInt(matchResult[0].slice(1)) - 1
+        endLineNumber = startLineNumber + 1
+      } else {
+        startLineNumber = Number.parseInt(matchResult[0].slice(1)) - 1
+        endLineNumber = Number.parseInt(matchResult[1].slice(1))
+      }
       return (
         <div className="flex w-full flex-col items-center">
           <EmbedGithubFile
             owner={owner}
             repo={repo}
             path={path}
+            startLineNumber={startLineNumber}
+            endLineNumber={endLineNumber}
             refType={ref}
           />
           <div className="mt-4">

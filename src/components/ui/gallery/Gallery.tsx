@@ -184,7 +184,7 @@ export const Gallery: FC<GalleryProps> = (props) => {
             }}
             className="border-border center pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 hover:opacity-100"
           >
-            <i className="icon-[mingcute--left-fill]" />
+            <i className="i-mingcute-left-fill" />
           </MotionButtonBase>
         </div>
       )}
@@ -200,7 +200,7 @@ export const Gallery: FC<GalleryProps> = (props) => {
             }}
             className="border-border center pointer-events-auto flex size-6 rounded-full border bg-base-100 p-1 opacity-80 hover:opacity-100"
           >
-            <i className="icon-[mingcute--right-fill]" />
+            <i className="i-mingcute-right-fill" />
           </MotionButtonBase>
         </div>
       )}

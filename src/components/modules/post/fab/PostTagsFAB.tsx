@@ -27,7 +27,7 @@ export const PostTagsFAB = () => {
         })
       }}
     >
-      <i className="icon-[mingcute--hashtag-line]" />
+      <i className="i-mingcute-hashtag-line" />
     </FABPortable>
   )
 }

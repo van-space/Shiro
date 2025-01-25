@@ -1,6 +1,6 @@
 'use client'
 
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 import { Fragment } from 'react'
 
@@ -19,7 +19,7 @@ import {
 } from '~/components/ui/dropdown-menu'
 import { EllipsisHorizontalTextWithTooltip } from '~/components/ui/typography'
 import { useIsClient } from '~/hooks/common/use-is-client'
-import { signOut } from '~/lib/authjs'
+import { authClient } from '~/lib/authjs'
 import { getToken, removeToken } from '~/lib/cookie'
 import { apiClient } from '~/lib/request'
 import { useAggregationSelector } from '~/providers/root/aggregation-data-provider'
@@ -114,9 +114,7 @@ export function UserAuth() {
                     onClick={() => {
                       window.open('/dashboard', '_blank')
                     }}
-                    icon={
-                      <i className="icon-[mingcute--dashboard-3-line] size-4" />
-                    }
+                    icon={<i className="i-mingcute-dashboard-3-line size-4" />}
                   >
                     轻管理
                   </DropdownMenuItem>
@@ -127,9 +125,7 @@ export function UserAuth() {
                         window.open(adminUrl, '_blank')
                       }
                     }}
-                    icon={
-                      <i className="icon-[mingcute--dashboard-2-line] size-4" />
-                    }
+                    icon={<i className="i-mingcute-dashboard-2-line size-4" />}
                   >
                     控制台
                   </DropdownMenuItem>
@@ -137,14 +133,16 @@ export function UserAuth() {
                 </Fragment>
               )}
               <DropdownMenuItem
-                onClick={() => {
-                  Promise.allSettled([
-                    getToken() && apiClient.user.proxy('logout').post(),
-                    signOut(),
-                  ])
+                onClick={async () => {
+                  getToken() && apiClient.user.proxy('logout').post()
                   removeToken()
+                  await authClient.signOut().then((res) => {
+                    if (res.data?.success) {
+                      window.location.reload()
+                    }
+                  })
                 }}
-                icon={<i className="icon-[mingcute--exit-line] size-4" />}
+                icon={<i className="i-mingcute-exit-line size-4" />}
               >
                 登出
               </DropdownMenuItem>

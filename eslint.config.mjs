@@ -17,8 +17,10 @@ export default defineConfig(
       },
     },
     rules: {
+      'unicorn/expiring-todo-comments': 'off',
       'package-json/valid-package-def': 'off',
       '@eslint-react/no-missing-key': 'warn',
+      '@eslint-react/no-nested-components': 'warn',
       'no-restricted-syntax': 'off',
       'import/no-anonymous-default-export': 'off',
       eqeqeq: 'warn',

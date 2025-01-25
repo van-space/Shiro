@@ -7,10 +7,12 @@ import type { SessionReader } from '~/models/session'
 
 export const [, , useSessionReader, , getSessionReader, setSessionReader] =
   createAtomHooks(atom<SessionReader | null>(null))
+
 const [authReaderAtom, , , , getAuthReaders, _setAuthReaders] = createAtomHooks(
   atom<Record<string, AuthUser>>({}),
 )
 export { getAuthReaders }
+
 export const setAuthReaders = (readers: Record<string, AuthUser>) => {
   _setAuthReaders({
     ...getAuthReaders(),

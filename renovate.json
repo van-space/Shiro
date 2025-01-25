@@ -6,6 +6,7 @@
   ],
   "ignoreDeps": [
     "jojoo",
-    "framer-motion"
+    "next",
+    "react-toastify"
   ]
 }

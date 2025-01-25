@@ -40,7 +40,6 @@ export const SiteOwnerAvatar: Component = ({ className }) => {
       role={isLiving ? 'button' : 'img'}
       className={clsxm(
         'pointer-events-none relative z-[9] size-[40px] select-none',
-
         isLiving ? 'cursor-pointer rounded-full' : '',
         className,
       )}

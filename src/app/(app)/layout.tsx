@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+
 import type { Metadata, Viewport } from 'next'
 import { PublicEnvScript } from 'next-runtime-env'
 import type { PropsWithChildren } from 'react'
@@ -160,6 +161,7 @@ export default async function RootLayout(props: PropsWithChildren) {
           <SayHi />
           <HydrationEndDetector />
           <AccentColorStyleInjector color={themeConfig.config.color} />
+
           <link
             rel="shortcut icon"
             href={themeConfig.config.site.faviconDark}
@@ -185,6 +187,7 @@ export default async function RootLayout(props: PropsWithChildren) {
             <div data-theme>
               <Root>{children}</Root>
             </div>
+
             <TocAutoScroll />
             <SearchPanelWithHotKey />
             <Analyze />

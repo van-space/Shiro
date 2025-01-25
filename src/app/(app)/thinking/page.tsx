@@ -12,8 +12,8 @@ import {
   useQueryClient,
 } from '@tanstack/react-query'
 import clsx from 'clsx'
-import { stagger, useAnimate } from 'framer-motion'
 import { produce } from 'immer'
+import { stagger, useAnimate } from 'motion/react'
 import type { FC } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 
@@ -117,13 +117,14 @@ const PostBox = () => {
 const List = () => {
   const [hasNext, setHasNext] = useState(true)
 
-  const { data, isLoading, fetchNextPage, refetch } = useInfiniteQuery({
+  const { data, isLoading, fetchNextPage } = useInfiniteQuery({
     queryKey: QUERY_KEY,
     queryFn: async ({ pageParam }) => {
       const { data } = await apiClient.shorthand.getList({
         before: pageParam,
         size: FETCH_SIZE,
       })
+
       if (data.length < FETCH_SIZE) {
         setHasNext(false)
       }
@@ -146,7 +147,6 @@ const List = () => {
       .then(({ code }) => {
         if (code === RecentlyAttitudeResultEnum.Inc) {
           toast.success(sample(['(￣▽￣*) ゞ', '(＾▽＾)']))
-          refetch()
         } else {
           toast.success('[○･｀Д´･○]')
         }
@@ -159,7 +159,6 @@ const List = () => {
       .then(({ code }) => {
         if (code === RecentlyAttitudeResultEnum.Inc) {
           toast.success('(╥_╥)')
-          refetch()
         } else {
           toast.success('ヽ (・∀・) ﾉ')
         }
@@ -171,7 +170,7 @@ const List = () => {
 
   const getPrevData = usePrevious(data)
   useEffect(() => {
-    if (!data?.pages.flat().length) return
+    if (!data) return
     const pages = getPrevData()?.pages
     const count = pages?.reduce((acc, cur) => {
       return acc + cur.length
@@ -263,7 +262,7 @@ const List = () => {
                       })
                     }}
                   >
-                    <i className="icon-[mingcute--comment-line]" />
+                    <i className="i-mingcute-comment-line" />
 
                     <span className="sr-only">评论</span>
                     <span>
@@ -277,7 +276,7 @@ const List = () => {
                       handleUp(item.id)
                     }}
                   >
-                    <i className="icon-[mingcute--heart-line]" />
+                    <i className="i-mingcute-heart-line" />
                     <span className="sr-only">喜欢</span>
                     <span>{item.up}</span>
                   </button>
@@ -287,7 +286,7 @@ const List = () => {
                       handleDown(item.id)
                     }}
                   >
-                    <i className="icon-[mingcute--heart-crack-line]" />
+                    <i className="i-mingcute-heart-crack-line" />
                     <span className="sr-only">不喜欢</span>
                     <span>{item.down}</span>
                   </button>
@@ -369,7 +368,7 @@ const DeleteButton = (props: { id: string }) => {
         })
       }}
     >
-      <i className="icon-[mingcute--delete-line]" />
+      <i className="i-mingcute-delete-line" />
       <span className="sr-only">删除</span>
     </button>
   )
@@ -408,7 +407,7 @@ const RefPreview: FC<{ refModel: any }> = (props) => {
     <>
       <Divider className="my-4 w-12 bg-current opacity-50" />
       <p className="flex items-center space-x-2 opacity-80">
-        发表于： <i className="icon-[mingcute--link-3-line]" />
+        发表于： <i className="i-mingcute-link-3-line" />
         <PeekLink href={url} className="shiro-link--underline">
           {title}
         </PeekLink>

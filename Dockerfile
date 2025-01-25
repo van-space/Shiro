@@ -11,14 +11,12 @@ WORKDIR /app
 
 COPY . .
 
-
 RUN npm install -g pnpm
 RUN pnpm install
 
 FROM base AS builder
 
 RUN apk update && apk add --no-cache git
-
 
 WORKDIR /app
 COPY --from=deps /app/ .
