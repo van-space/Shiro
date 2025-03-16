@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [1.2.7](https://github.com/van-space/Shiro/compare/v1.2.6...v1.2.7) (2025-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#49](https://github.com/van-space/Shiro/issues/49)) ([cb4e03a](https://github.com/van-space/Shiro/commit/cb4e03a2e005fc20c289b2abc34ccfc046ba918d))
+* **deps:** update all non-major dependencies ([#54](https://github.com/van-space/Shiro/issues/54)) ([56006d6](https://github.com/van-space/Shiro/commit/56006d670b586fb169e15730db4efccebd34c122))
+* **deps:** update dependency better-auth to v1.1.16 [security] ([#56](https://github.com/van-space/Shiro/issues/56)) ([43ecd09](https://github.com/van-space/Shiro/commit/43ecd09fe769c34c3c3e0cd32a20ad55d866a0f1))
+* **deps:** update dependency better-auth to v1.1.21 [security] ([#57](https://github.com/van-space/Shiro/issues/57)) ([d51ec0d](https://github.com/van-space/Shiro/commit/d51ec0d7954324e045b860cb251319792e29c1cf))
+* **deps:** update dependency vite to v6.0.9 [security] ([#45](https://github.com/van-space/Shiro/issues/45)) ([ca4b988](https://github.com/van-space/Shiro/commit/ca4b9882f1bd163a2d2afee6bae0c4c9e8be12ca))
+
+
+
 ## [1.2.6](https://github.com/van-space/Shiro/compare/v1.2.3...v1.2.6) (2025-01-25)
 
 

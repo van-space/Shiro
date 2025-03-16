@@ -1,6 +1,6 @@
 {
   "name": "Shiro",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "private": false,
   "packageManager": "pnpm@9.15.5",
   "license": "AGPL-3.0",
