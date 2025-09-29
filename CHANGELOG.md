@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.2.9](https://github.com/van-space/Shiro/compare/v1.2.8...v1.2.9) (2025-09-29)
+
+
+### Bug Fixes
+
+* Update Firework component to prevent pointer events on canvas ([6731f00](https://github.com/van-space/Shiro/commit/6731f00f64232a90c7482f1124825bf789b55dab))
+
+
+
 ## [1.2.8](https://github.com/van-space/Shiro/compare/v1.2.7...v1.2.8) (2025-09-29)
 
 
