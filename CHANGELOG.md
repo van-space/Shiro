@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## [1.2.8](https://github.com/van-space/Shiro/compare/v1.2.7...v1.2.8) (2025-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v6.0.12 [security] ([#59](https://github.com/van-space/Shiro/issues/59)) ([2e195dc](https://github.com/van-space/Shiro/commit/2e195dc4b4d5b6894b481ae428b5ed3595e0096a))
+* **deps:** update dependency vite to v6.0.13 [security] ([#60](https://github.com/van-space/Shiro/issues/60)) ([aa7e76b](https://github.com/van-space/Shiro/commit/aa7e76badcdbf3ae592d8474bd059679405bd107))
+* **deps:** update dependency vite to v6.0.14 [security] ([#61](https://github.com/van-space/Shiro/issues/61)) ([e3efd5f](https://github.com/van-space/Shiro/commit/e3efd5f2e5009ca7c431ac87770f134ab2d9b379))
+
+
+### Features
+
+* Add seasonal components for birthday and new year celebrations ([6be5d82](https://github.com/van-space/Shiro/commit/6be5d82e7b09e16b7d6015db6674784f7902721b))
+
+
+
 ## [1.2.7](https://github.com/van-space/Shiro/compare/v1.2.6...v1.2.7) (2025-03-16)
 
 
