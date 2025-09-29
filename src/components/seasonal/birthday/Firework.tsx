@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback,useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 
 interface ParticleType {
   x: number
@@ -191,20 +191,20 @@ export default function Firework({
 
   return (
     <>
+      {children}
       <canvas
         ref={canvasRef}
-        className={`pointer-events-auto fixed inset-0 ${className}`}
+        className={`pointer-events-none fixed inset-0 ${className}`}
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          pointerEvents: 'auto',
+          pointerEvents: 'none',
           zIndex: 1,
         }}
       />
-      {children}
     </>
   )
 }
