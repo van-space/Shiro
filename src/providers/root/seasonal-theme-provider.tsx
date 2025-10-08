@@ -31,7 +31,7 @@ export function SeasonalThemeProvider({
   React.useEffect(() => {
     if (!isMounted) return
 
-    if (resolvedTheme !== 'light') {
+    if (resolvedTheme !== 'light' && seasonalTheme !== SeasonalTheme.None) {
       toast('新的主题已推送，点我立即体验！', 'info', {
         onClick: () => {
           buildThemeTransition('light')
