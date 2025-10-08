@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [1.2.10](https://github.com/van-space/Shiro/compare/v1.2.9...v1.2.10) (2025-10-08)
+
+
+### Bug Fixes
+
+* Remove inline styles and background image from Content component ([1510e0a](https://github.com/van-space/Shiro/commit/1510e0a22068dc4e4032078c76f94bd3d75debe5))
+* Reset seasonal theme to 'none' in SeasonalThemeProvider ([76cb77e](https://github.com/van-space/Shiro/commit/76cb77e837d05118a78dbd4e80a91786896d2742))
+
+
+
 ## [1.2.9](https://github.com/van-space/Shiro/compare/v1.2.8...v1.2.9) (2025-09-29)
 
 
