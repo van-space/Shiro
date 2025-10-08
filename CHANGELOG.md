@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.2.12](https://github.com/van-space/Shiro/compare/v1.2.11...v1.2.12) (2025-10-08)
+
+
+### Bug Fixes
+
+* 添加背景颜色以改善Paper组件的可读性 ([3b7d3cf](https://github.com/van-space/Shiro/commit/3b7d3cf8cca2ec404424b1e86b4e1e87a3d87b54))
+
+
+
 ## [1.2.11](https://github.com/van-space/Shiro/compare/v1.2.10...v1.2.11) (2025-10-08)
 
 
