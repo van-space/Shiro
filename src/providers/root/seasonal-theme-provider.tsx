@@ -19,7 +19,7 @@ export function SeasonalThemeProvider({
 }: {
   children: React.ReactNode
 }) {
-  const seasonalTheme = 'birthday' as SeasonalTheme
+  const seasonalTheme = 'none' as SeasonalTheme
   const { setTheme, resolvedTheme } = useTheme()
   const isMounted = useIsMountedState()
 
