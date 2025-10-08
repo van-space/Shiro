@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.2.11](https://github.com/van-space/Shiro/compare/v1.2.10...v1.2.11) (2025-10-08)
+
+
+### Bug Fixes
+
+* 添加季节主题检查以优化主题切换逻辑 ([9087ff8](https://github.com/van-space/Shiro/commit/9087ff81f9a9b649d5cbdcc3d2407e507cefbabd))
+
+
+
 ## [1.2.10](https://github.com/van-space/Shiro/compare/v1.2.9...v1.2.10) (2025-10-08)
 
 
