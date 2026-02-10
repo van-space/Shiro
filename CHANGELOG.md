@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [1.2.13](https://github.com/van-space/Shiro/compare/v1.2.12...v1.2.13) (2026-02-10)
+
+
+### Bug Fixes
+
+* 更新季节主题为新年并修正主题切换逻辑 ([9e46903](https://github.com/van-space/Shiro/commit/9e46903204f055d99e32ca4797364bdb8a470c88))
+* **deps:** update dependency js-yaml to v4.1.1 [security] ([#67](https://github.com/van-space/Shiro/issues/67)) ([2bebed9](https://github.com/van-space/Shiro/commit/2bebed94fd1c04099b1b06e9de780dfebc78fa50))
+
+
+
 ## [1.2.12](https://github.com/van-space/Shiro/compare/v1.2.11...v1.2.12) (2025-10-08)
 
 
@@ -1111,7 +1121,7 @@
 * rss render ([a47ad57](https://github.com/van-space/Shiro/commit/a47ad575ff4adc3561e4bf3d204e88c7ea249802))
 * shiki ([6e4b5e9](https://github.com/van-space/Shiro/commit/6e4b5e966cbb7ada5d188036a4cb6422e69540e9))
 * some ui optimize and next cache hit ([269189e](https://github.com/van-space/Shiro/commit/269189e104df1a7586d48c5dfafb879df2cc3973))
-* source of gh-commit ([43d7e05](https://github.com/van-space/Shiro/commit/43d7e05a655530677678ef082091ce2eced5c0b2))
+* source of gh-commit ([43d7e05](https://github.com/van-space/Shiro/commit/43d7e05a655530677678ef082091ce2eced5c0b2)), closes [#commit](https://github.com/van-space/Shiro/issues/commit)
 * support activity config ([5b5cb30](https://github.com/van-space/Shiro/commit/5b5cb302d9ca5849c50121004fd7b3066806e82e))
 * thinking page ([66aa46d](https://github.com/van-space/Shiro/commit/66aa46d4ebc8e9ab9272e9a7d4d7f304d3f385f6))
 * xlog summary ([16b3866](https://github.com/van-space/Shiro/commit/16b3866befd6ca113f4d3e32b9e6f56696f4491d))
