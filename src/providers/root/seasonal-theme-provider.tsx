@@ -19,7 +19,7 @@ export function SeasonalThemeProvider({
 }: {
   children: React.ReactNode
 }) {
-  const seasonalTheme = 'new_year' as SeasonalTheme
+  const seasonalTheme = 'none' as SeasonalTheme
   const { setTheme, resolvedTheme } = useTheme()
   const isMounted = useIsMountedState()
 
@@ -31,10 +31,10 @@ export function SeasonalThemeProvider({
   React.useEffect(() => {
     if (!isMounted) return
 
-    if (resolvedTheme !== 'dark' && seasonalTheme !== SeasonalTheme.None) {
+    if (resolvedTheme !== 'light' && seasonalTheme !== SeasonalTheme.None) {
       toast('新的主题已推送，点我立即体验！', 'info', {
         onClick: () => {
-          buildThemeTransition('dark')
+          buildThemeTransition('light')
         },
       })
     }
