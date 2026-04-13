@@ -1,14 +1,15 @@
 # CHANGELOG
 
+
+## [1.2.14](https://github.com/van-space/Shiro/compare/v1.2.13...v1.2.14) (2026-04-13)
+
 ## [1.2.13](https://github.com/van-space/Shiro/compare/v1.2.12...v1.2.13) (2026-02-10)
 
 
 ### Bug Fixes
 
-* 更新季节主题为新年并修正主题切换逻辑 ([9e46903](https://github.com/van-space/Shiro/commit/9e46903204f055d99e32ca4797364bdb8a470c88))
 * **deps:** update dependency js-yaml to v4.1.1 [security] ([#67](https://github.com/van-space/Shiro/issues/67)) ([2bebed9](https://github.com/van-space/Shiro/commit/2bebed94fd1c04099b1b06e9de780dfebc78fa50))
-
-
+* 更新季节主题为新年并修正主题切换逻辑 ([9e46903](https://github.com/van-space/Shiro/commit/9e46903204f055d99e32ca4797364bdb8a470c88))
 
 ## [1.2.12](https://github.com/van-space/Shiro/compare/v1.2.11...v1.2.12) (2025-10-08)
 
@@ -17,16 +18,12 @@
 
 * 添加背景颜色以改善Paper组件的可读性 ([3b7d3cf](https://github.com/van-space/Shiro/commit/3b7d3cf8cca2ec404424b1e86b4e1e87a3d87b54))
 
-
-
 ## [1.2.11](https://github.com/van-space/Shiro/compare/v1.2.10...v1.2.11) (2025-10-08)
 
 
 ### Bug Fixes
 
 * 添加季节主题检查以优化主题切换逻辑 ([9087ff8](https://github.com/van-space/Shiro/commit/9087ff81f9a9b649d5cbdcc3d2407e507cefbabd))
-
-
 
 ## [1.2.10](https://github.com/van-space/Shiro/compare/v1.2.9...v1.2.10) (2025-10-08)
 
@@ -36,16 +33,12 @@
 * Remove inline styles and background image from Content component ([1510e0a](https://github.com/van-space/Shiro/commit/1510e0a22068dc4e4032078c76f94bd3d75debe5))
 * Reset seasonal theme to 'none' in SeasonalThemeProvider ([76cb77e](https://github.com/van-space/Shiro/commit/76cb77e837d05118a78dbd4e80a91786896d2742))
 
-
-
 ## [1.2.9](https://github.com/van-space/Shiro/compare/v1.2.8...v1.2.9) (2025-09-29)
 
 
 ### Bug Fixes
 
 * Update Firework component to prevent pointer events on canvas ([6731f00](https://github.com/van-space/Shiro/commit/6731f00f64232a90c7482f1124825bf789b55dab))
-
-
 
 ## [1.2.8](https://github.com/van-space/Shiro/compare/v1.2.7...v1.2.8) (2025-09-29)
 
@@ -61,8 +54,6 @@
 
 * Add seasonal components for birthday and new year celebrations ([6be5d82](https://github.com/van-space/Shiro/commit/6be5d82e7b09e16b7d6015db6674784f7902721b))
 
-
-
 ## [1.2.7](https://github.com/van-space/Shiro/compare/v1.2.6...v1.2.7) (2025-03-16)
 
 
@@ -73,8 +64,6 @@
 * **deps:** update dependency better-auth to v1.1.16 [security] ([#56](https://github.com/van-space/Shiro/issues/56)) ([43ecd09](https://github.com/van-space/Shiro/commit/43ecd09fe769c34c3c3e0cd32a20ad55d866a0f1))
 * **deps:** update dependency better-auth to v1.1.21 [security] ([#57](https://github.com/van-space/Shiro/issues/57)) ([d51ec0d](https://github.com/van-space/Shiro/commit/d51ec0d7954324e045b860cb251319792e29c1cf))
 * **deps:** update dependency vite to v6.0.9 [security] ([#45](https://github.com/van-space/Shiro/issues/45)) ([ca4b988](https://github.com/van-space/Shiro/commit/ca4b9882f1bd163a2d2afee6bae0c4c9e8be12ca))
-
-
 
 ## [1.2.6](https://github.com/van-space/Shiro/compare/v1.2.3...v1.2.6) (2025-01-25)
 
@@ -88,16 +77,12 @@
 
 * migrate from v1.2.5 ([e7c84e0](https://github.com/van-space/Shiro/commit/e7c84e02d6b893bf7a1dc14a75593d2c815abb95))
 
-
-
 ## [1.2.3](https://github.com/van-space/Shiro/compare/v1.2.2...v1.2.3) (2025-01-15)
 
 
 ### Features
 
 * 主题通知 ([1fbb0a9](https://github.com/van-space/Shiro/commit/1fbb0a91d24d919ca6fddcdb7e621b421ee1874e))
-
-
 
 ## [1.2.2](https://github.com/van-space/Shiro/compare/v1.2.1...v1.2.2) (2025-01-15)
 
@@ -115,16 +100,12 @@
 
 * 增加特定节日主题 ([7f2d7fd](https://github.com/van-space/Shiro/commit/7f2d7fd913eed891c8167f85f592416ff8d9f34a))
 
-
-
 ## [1.2.1](https://github.com/van-space/Shiro/compare/v1.2.0...v1.2.1) (2024-09-21)
 
 
 ### Bug Fixes
 
 * activity presence ([9be8ec5](https://github.com/van-space/Shiro/commit/9be8ec57a276cd0effad60d1899bbc319d3ce875))
-
-
 
 # [1.2.0](https://github.com/van-space/Shiro/compare/v1.1.6...v1.2.0) (2024-09-21)
 
@@ -153,8 +134,6 @@
 
 * activity ([ac54fcd](https://github.com/van-space/Shiro/commit/ac54fcd959a3a1f8131f7f1ed8efe1e37189e4ce))
 
-
-
 ## [1.1.6](https://github.com/van-space/Shiro/compare/v1.1.11...v1.1.6) (2024-09-12)
 
 
@@ -168,8 +147,6 @@
 
 * migrate ([c0ecc73](https://github.com/van-space/Shiro/commit/c0ecc73d6b2334497ef21a5625f1df0e93ca0706))
 
-
-
 ## [1.1.11](https://github.com/van-space/Shiro/compare/v1.1.10...v1.1.11) (2024-08-25)
 
 
@@ -177,16 +154,12 @@
 
 * revert page mode select ([d04bc2c](https://github.com/van-space/Shiro/commit/d04bc2c607febf3ace95a35ebe9560eff3f741e6))
 
-
-
 ## [1.1.10](https://github.com/van-space/Shiro/compare/v1.1.9...v1.1.10) (2024-08-25)
 
 
 ### Bug Fixes
 
 * posts settings ([2f54e50](https://github.com/van-space/Shiro/commit/2f54e50fdf89cd1cdc64770c6dacacd9a752458b))
-
-
 
 ## [1.1.9](https://github.com/van-space/Shiro/compare/v1.1.8...v1.1.9) (2024-08-25)
 
@@ -214,12 +187,10 @@
 
 ### Features
 
-* 列表展示模式选择 ([e0bf27c](https://github.com/van-space/Shiro/commit/e0bf27c250c22b1444384c7a4cdd9566d878d289))
 * animate pin icon ([071d1cb](https://github.com/van-space/Shiro/commit/071d1cb3f7b1d097115e878e46a3f3117367b051))
 * render single link style in thinking ([840b77d](https://github.com/van-space/Shiro/commit/840b77dee9b7ef732af37d02368a42a41e2da6a5))
 * scroll mask ([47d6f56](https://github.com/van-space/Shiro/commit/47d6f560ad7641f39935c8569fdea96e6fd839b2))
-
-
+* 列表展示模式选择 ([e0bf27c](https://github.com/van-space/Shiro/commit/e0bf27c250c22b1444384c7a4cdd9566d878d289))
 
 ## [1.1.8](https://github.com/van-space/Shiro/compare/v1.1.7...v1.1.8) (2024-07-23)
 
@@ -227,8 +198,6 @@
 ### Bug Fixes
 
 * remove trailing triggers ([9007a1e](https://github.com/van-space/Shiro/commit/9007a1ea4befe88d8e04912d0987db12a2170c90))
-
-
 
 ## [1.1.7](https://github.com/van-space/Shiro/compare/v1.1.5...v1.1.7) (2024-07-16)
 
@@ -243,8 +212,6 @@
 
 * add sub module report assets ([1206d19](https://github.com/van-space/Shiro/commit/1206d19e43e91f2f6f07d796052cde6628be133a))
 * delete FUNDING ([4927dc4](https://github.com/van-space/Shiro/commit/4927dc42f687e2ffcf8d5eb7538b97f7c7b58420))
-
-
 
 ## [1.1.5](https://github.com/van-space/Shiro/compare/v1.1.4...v1.1.5) (2024-07-06)
 
@@ -275,8 +242,6 @@
 
 * footnote style and gfm task style ([fafd9e4](https://github.com/van-space/Shiro/commit/fafd9e4499e9929c529336fb777c5c6501a9fe31))
 
-
-
 ## [1.1.4](https://github.com/van-space/Shiro/compare/v1.1.3...v1.1.4) (2024-06-11)
 
 
@@ -293,8 +258,6 @@
 * preview page ([2bc2500](https://github.com/van-space/Shiro/commit/2bc250080f1b2f4fd8e2ffe5a47a3ff70633a890))
 * rss render ([4825aef](https://github.com/van-space/Shiro/commit/4825aefc7948cee5de8940b4958401a2b2b88dfc))
 * xlog summary, closes [#24](https://github.com/van-space/Shiro/issues/24) ([3a7e297](https://github.com/van-space/Shiro/commit/3a7e297fb979dbf7f509d9082bc31799b5633950))
-
-
 
 ## [1.1.3](https://github.com/van-space/Shiro/compare/v1.1.2...v1.1.3) (2024-05-31)
 
@@ -329,8 +292,6 @@
 * comment oauth set url ([54eaf32](https://github.com/van-space/Shiro/commit/54eaf327dc499d339338dc6c73e8c539e8efd9ca))
 * new copy code animate ([44033bf](https://github.com/van-space/Shiro/commit/44033bfd2a8b60e4d161030ee6e7a67f6f07c383))
 
-
-
 ## [1.1.2](https://github.com/van-space/Shiro/compare/v1.1.1...v1.1.2) (2024-05-04)
 
 
@@ -354,8 +315,6 @@
 ### Features
 
 * shiki block `expand` attr ([f6b0d1d](https://github.com/van-space/Shiro/commit/f6b0d1d2066a4598da5b77b71fb0326a72e3720d))
-
-
 
 ## [1.1.1](https://github.com/van-space/Shiro/compare/v1.1.0...v1.1.1) (2024-04-28)
 
@@ -397,8 +356,6 @@
 * self favicon in `MLink` ([4aac9b8](https://github.com/van-space/Shiro/commit/4aac9b8c66445f1ceb36dbd0398dcdf4e63cc1dc))
 * shiki fully support ([42e21cc](https://github.com/van-space/Shiro/commit/42e21cc9df5ae73ffd6d65c7152f631a92e8cd74))
 
-
-
 # [1.1.0](https://github.com/van-space/Shiro/compare/v1.0.3...v1.1.0) (2024-04-17)
 
 
@@ -439,8 +396,6 @@
 * upgrade nextjs 14.2 ([4c377eb](https://github.com/van-space/Shiro/commit/4c377eb3d4ac4eb909dccdd8b18a69d8fa2de9ea))
 * worker socket ([#3](https://github.com/van-space/Shiro/issues/3)) ([550abd7](https://github.com/van-space/Shiro/commit/550abd72508d9b586342eeae3b706ad7a8bc35ae))
 
-
-
 ## [1.0.3](https://github.com/van-space/Shiro/compare/v1.0.2...v1.0.3) (2024-04-04)
 
 
@@ -473,16 +428,12 @@
 * bilibili video render ([21954c7](https://github.com/van-space/Shiro/commit/21954c7f0973a7b3439e07970ba6984ccbfb73c1))
 * hide module when no data ([#322](https://github.com/van-space/Shiro/issues/322)) ([c878b8f](https://github.com/van-space/Shiro/commit/c878b8f5c262b89517e02791d143d6019646f298))
 
-
-
 ## [1.0.2](https://github.com/van-space/Shiro/compare/v1.0.1...v1.0.2) (2024-03-29)
 
 
 ### Bug Fixes
 
 * docker ci ([b1a64f5](https://github.com/van-space/Shiro/commit/b1a64f5da2b87863032feb50b016a91951e431f6))
-
-
 
 ## [1.0.1](https://github.com/van-space/Shiro/compare/v1.0.0...v1.0.1) (2024-03-29)
 
@@ -629,12 +580,12 @@
 * remote component render ([2401325](https://github.com/van-space/Shiro/commit/240132543c8f46717fd3dc75c3a7773ddf6f45d6))
 * remove `A` ([6961dc0](https://github.com/van-space/Shiro/commit/6961dc086bcd915cb0f8f2fedeed368491750774))
 * remove `revalidateTag` ([93a4f23](https://github.com/van-space/Shiro/commit/93a4f239a9e3969e27616a80396d54548640e385))
-* remove 数据万象 params ([2a393b7](https://github.com/van-space/Shiro/commit/2a393b7280312edd6af5ba68fd493eb5f65d5095))
 * remove cache ([00a7551](https://github.com/van-space/Shiro/commit/00a7551cfab68127491fc625a19934d01779958a))
 * remove fuck unstable_cache ([c5c7f23](https://github.com/van-space/Shiro/commit/c5c7f232e449ab142b01a4342ad4620b81b5b917))
 * remove ring style ([5aa9c85](https://github.com/van-space/Shiro/commit/5aa9c85640b1f138e82c73e2b1dc42b49ef66ce6))
 * remove route state replace ([acc815e](https://github.com/van-space/Shiro/commit/acc815e6bd94b278902135ee4a48478a355c9a94))
 * remove stupid code ([e5d3a08](https://github.com/van-space/Shiro/commit/e5d3a08e9e337947517925b83c06f1178e94455e))
+* remove 数据万象 params ([2a393b7](https://github.com/van-space/Shiro/commit/2a393b7280312edd6af5ba68fd493eb5f65d5095))
 * render alert rule but can not edit now ([9efdf29](https://github.com/van-space/Shiro/commit/9efdf2958afe466746378fd9bcf529edc4d701f5))
 * reply comment ([946b234](https://github.com/van-space/Shiro/commit/946b2345e9b580d94aba887c2eebb432e2090a27))
 * requestErrorHandler to fetchQuery calls ([8844c36](https://github.com/van-space/Shiro/commit/8844c36949bca765400e49cdc72637372cc9a85f))
@@ -691,7 +642,6 @@
 ### Features
 
 *  add feed metadata ([1c9aba2](https://github.com/van-space/Shiro/commit/1c9aba2a332ed5a8e305a5ce1a3deedb2b0803e7))
-* 添加一些windows上的进程名称 ([#276](https://github.com/van-space/Shiro/issues/276)) ([8d39b48](https://github.com/van-space/Shiro/commit/8d39b4800b990c002f72ddca922a14b92ece7c16))
 * add @mx-space/webhook dependency and update revalidate time ([99dca50](https://github.com/van-space/Shiro/commit/99dca509b7de05b2d73fbc883ed139bb106caeea))
 * add activity rooms ([4426fa6](https://github.com/van-space/Shiro/commit/4426fa680c2d1b8a276dfaccfc0f53f4e55633e6))
 * add comment source ([28e71b4](https://github.com/van-space/Shiro/commit/28e71b4d4ba3f3e4398ccc5f4890c964d05a085f))
@@ -734,8 +684,7 @@
 * update generated noise background ([cfb8c6a](https://github.com/van-space/Shiro/commit/cfb8c6a9d6777274fe3aafc9bc8d5318875562e2))
 * upgrade daisyui ([76c0596](https://github.com/van-space/Shiro/commit/76c059687acda18eb3731f8c1f36c607c1f30de9))
 * ws event real read count ([0a61a81](https://github.com/van-space/Shiro/commit/0a61a81e36e359de3e08e5e1e3c0a50228404d1c))
-
-
+* 添加一些windows上的进程名称 ([#276](https://github.com/van-space/Shiro/issues/276)) ([8d39b48](https://github.com/van-space/Shiro/commit/8d39b4800b990c002f72ddca922a14b92ece7c16))
 
 # [1.0.0](https://github.com/van-space/Shiro/compare/v0.2.0...v1.0.0) (2023-12-26)
 
@@ -922,8 +871,6 @@
 * disable accent transition in safari ([1280214](https://github.com/van-space/Shiro/commit/1280214e170175b50c852f9879413e24b1121ab7))
 * use built in og font ([42f03ca](https://github.com/van-space/Shiro/commit/42f03caa3db521fdb4d7ff6c1992d6269bee8535))
 
-
-
 # [0.2.0](https://github.com/van-space/Shiro/compare/v0.1.1...v0.2.0) (2023-08-30)
 
 
@@ -994,8 +941,6 @@
 
 * comment dfs optimize ([4588bc8](https://github.com/van-space/Shiro/commit/4588bc8d20648ef947ae6904c9a1658c34d9198b))
 
-
-
 ## [0.1.1](https://github.com/van-space/Shiro/compare/v0.1.0...v0.1.1) (2023-07-27)
 
 
@@ -1030,8 +975,6 @@
 ### Performance Improvements
 
 * I don't want to say anything just fxxk react again ([42cd176](https://github.com/van-space/Shiro/commit/42cd17608a1c6de4b47a6527f37fa81a6d49e441))
-
-
 
 # [0.1.0](https://github.com/van-space/Shiro/compare/v0.0.1...v0.1.0) (2023-07-17)
 
@@ -1131,8 +1074,6 @@
 ### Performance Improvements
 
 * memo `Activity` ([cc0cc47](https://github.com/van-space/Shiro/commit/cc0cc470dc90796a0d629a513400c8a2a348bf46))
-
-
 
 ## [0.0.1](https://github.com/van-space/Shiro/compare/3000d8049e64f42e4536e30a84e534c16726af5e...v0.0.1) (2023-07-06)
 
@@ -1351,6 +1292,3 @@
 ### Performance Improvements
 
 * re-reduce router change re-render ([f0f529f](https://github.com/van-space/Shiro/commit/f0f529f2eefc58bd8ea1dd445b001a628c57ef83))
-
-
-
