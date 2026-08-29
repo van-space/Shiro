@@ -77,7 +77,7 @@
     "immer": "^10.1.1",
     "jojoo": "0.1.4",
     "jotai": "2.11.3",
-    "js-cookie": "3.0.5",
+    "js-cookie": "3.0.7",
     "js-yaml": "4.1.1",
     "jsondiffpatch": "^0.6.0",
     "katex": "^0.16.19",
